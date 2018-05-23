@@ -1,0 +1,90 @@
+<html>
+
+<head>
+   <title>Address book</title>
+   	<link rel="stylesheet" href="store.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <br>
+<center>
+
+ <div class="row">
+   <div class="col-xs-2"></div>
+   <div class="col-xs-4">
+     <button class="btn btn-primary" data-toggle="collapse" data-target="#updat" id="update">Update</button>
+     <div id="updat" class="collapse">
+       <form method="post" action="/update/entry">
+          Name:<br>
+          <input type="text" name="name" placeholder="name" required >
+          <br>
+          Email:<br>
+          <input type="email" name="email" placeholder="email">
+          <br>
+          Address:<br>
+          <input type="type" name="address" placeholder="address">
+          <br>
+          Phone number:<br>
+          <input type="number" name="phonenumber" placeholder="phone number">
+          <br>
+          Blood group<br>
+          <input type="text" name="bloodgroup" placeholder="blood group">
+          <br><br>
+          <input class="btn btn-primary" type="submit" name="update" value="Update">
+        </form>
+      </div>
+</div>
+
+      <div class="col-xs-4">
+        <button class="btn btn-danger"  data-toggle="collapse" data-target="#delet" id="delete">Delete</button>
+          <div id="delet" class="collapse">
+            <form method="post" action="/delete/entry">
+              <input type="search" name="deleteEntry" placeholder="Enter the name" required>
+              <input class="btn btn-danger" type="submit" name="danger" value="Delete">
+            </form>
+          </div>
+      </div>
+      <div class="col-xs-2"></div>
+</center>
+<br>
+
+<h1 class="text-center" id="head"> Address Book Entries </h1>
+<div class="well text-center">
+
+  <table style="width:100%">
+
+  <tr>
+    <th class="text-center">Name</th>
+    <th class="text-center">Email</th>
+    <th class="text-center">Address</th>
+    <th class="text-center">Phone number</th>
+    <th class="text-center">Bloood group</th>
+  </tr>
+
+  <tr>
+    <td id = "n" class="text-center"></td>
+    <td id = "e" class="text-center"></td>
+    <td id = "a" class="text-center"></td>
+    <td id = "p" class="text-center"></td>
+    <td id = "b" class="text-center"></td>
+  </tr>
+
+</table>
+  </div>
+
+<hr>
+  <center><i><strong> Made with  <i class="fa fa-heart" aria-hidden="true"></i> and <i class="fa fa-coffee" aria-hidden="true"></i><strong></i></center>
+<hr>
+</div>
+
+</body>
+
+  <script  src="store.js"></script>
+</html>
