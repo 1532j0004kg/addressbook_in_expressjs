@@ -7,6 +7,9 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+   <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+   <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -17,7 +20,8 @@
 <center>
 
  <div class="row">
-   <div class="col-xs-2"></div>
+    
+  <div class="col-xs-2" id="animate"><a href="/" class="btn btn-info">Put a Entry</a></div>
    <div class="col-xs-4">
      <button class="btn btn-primary" data-toggle="collapse" data-target="#updat" id="update">Update</button>
      <div id="updat" class="collapse">
@@ -46,21 +50,23 @@
         <button class="btn btn-danger"  data-toggle="collapse" data-target="#delet" id="delete">Delete</button>
           <div id="delet" class="collapse">
             <form method="post" action="/delete/entry">
-              <input type="search" name="deleteEntry" placeholder="Enter the name" required>
+              <input type="search" name="deleteEntry" placeholder="Enter the name" autofocus required>
               <input class="btn btn-danger" type="submit" name="danger" value="Delete">
             </form>
           </div>
       </div>
-      <div class="col-xs-2"></div>
-</center>
-<br>
+      <div class="col-xs-2"><input id="search" type="search" placeholder="Search by name..."></div>
+</div>
+   </center>
 
+  <br>
+ 
 <h1 class="text-center" id="head"> Address Book Entries </h1>
 <div class="well text-center">
 
-  <table style="width:100%">
+<table style="width:100%" id="table">
 
-  <tr>
+  <tr> 
     <th class="text-center">Name</th>
     <th class="text-center">Email</th>
     <th class="text-center">Address</th>
@@ -68,19 +74,12 @@
     <th class="text-center">Bloood group</th>
   </tr>
 
-  <tr>
-    <td id = "n" class="text-center"></td>
-    <td id = "e" class="text-center"></td>
-    <td id = "a" class="text-center"></td>
-    <td id = "p" class="text-center"></td>
-    <td id = "b" class="text-center"></td>
-  </tr>
-
 </table>
-  </div>
+  
+ </div>
 
 <hr>
-  <center><i><strong> Made with  <i class="fa fa-heart" aria-hidden="true"></i> and <i class="fa fa-coffee" aria-hidden="true"></i><strong></i></center>
+  <center><i><strong> Made with  <i class="fa fa-heart" aria-hidden="true"></i> and <i class="fa fa-coffee" aria-hidden="true"></i></strong></i></center>
 <hr>
 </div>
 
